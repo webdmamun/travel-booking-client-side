@@ -1,0 +1,87 @@
+.login-title {
+  margin-top: 48px;
+}
+
+.login-form {
+  background: #fff;
+  /* max-width: 500px; */
+  width: 500px;
+  margin-top: 48px;
+  margin-bottom: 48px;
+  padding: 58px 44px;
+  border: 1px solid #e1e2f0;
+  border-radius: 4px;
+  box-shadow: 0 0 5px 0 rgba(42, 45, 48, 0.12);
+  transition: all 0.3s ease;
+}
+
+.lgoin-input-area {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.lgoin-input-area label {
+  font-size: 13px;
+  color: #8086a9;
+}
+
+.lgoin-input-area input {
+  flex: 1;
+  padding: 13px;
+  border: 1px solid #d6d8e6;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: all 0.2s ease-out;
+}
+
+.lgoin-input-area input:focus {
+  outline: none;
+  box-shadow: inset 2px 2px 5px 0 rgba(42, 45, 48, 0.12);
+}
+
+.lgoin-input-area input::placeholder {
+  color: #c8cddf;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  background: #15c39a;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 15px;
+  transition: background 0.2s ease-out;
+}
+
+.login-button:hover {
+  background: #55d3ac;
+}
+
+@media (max-width: 458px) {
+  body {
+    margin: 0 18px;
+  }
+
+  form {
+    background: #f9faff;
+    border: none;
+    box-shadow: none;
+    padding: 20px 0;
+  }
+}
+.google-sginin-button {
+  border: none;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  margin-top: -25px;
+}
+.google-sginin-button img {
+  width: 50%;
+
+  justify-content: center;
+}
