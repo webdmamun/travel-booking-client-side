@@ -13,6 +13,7 @@ import MyBookings from "./Pages/MyBookings/MyBookings";
 import Bookedhotel from "./Pages/MyBookings/BookedHotel/Bookedhotel";
 import BookedService from "./Pages/MyBookings/BookedService/BookedService";
 import Contact from "./Pages/Contact/Contact";
+import PrivateRoute from "./Pages/PrivateRoute/RivateRoute";
 
 function App() {
   return (
@@ -27,12 +28,12 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <Route path="/services/:serviceID">
+            <PrivateRoute path="/services/:serviceID">
               <ServiceDetail></ServiceDetail>
-            </Route>
-            <Route path="/hotels/:hotelID">
+            </PrivateRoute>
+            <PrivateRoute path="/hotels/:hotelID">
               <HotelDetail></HotelDetail>
-            </Route>
+            </PrivateRoute>
             <Route path="/services">
               <Services></Services>
             </Route>
@@ -45,15 +46,15 @@ function App() {
             <Route path="/contact">
               <Contact></Contact>
             </Route>
-            <Route path="/mybookings">
+            <PrivateRoute path="/mybookings">
               <MyBookings></MyBookings>
-            </Route>
-            <Route path="/bookedhotel">
+            </PrivateRoute>
+            <PrivateRoute path="/bookedhotel">
               <Bookedhotel></Bookedhotel>
-            </Route>
-            <Route path="/bookedservice">
+            </PrivateRoute>
+            <PrivateRoute path="/bookedservice">
               <BookedService></BookedService>
-            </Route>
+            </PrivateRoute>
             <Route path="*">
               <NotFound></NotFound>
             </Route>

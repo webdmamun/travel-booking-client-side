@@ -114,7 +114,7 @@ const Header = () => {
               )}
               {user.email && (
                 <Navbar.Text>
-                  Signed in as: <a href="/home">{user?.displayName}</a>
+                  <a href="/home">{user?.displayName}</a>
                   <img
                     className="mx-3 nav-user-img"
                     src={user.photoURL}

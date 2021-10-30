@@ -1,4 +1,3 @@
-import React from "react";
 import { Link, useLocation, useHistory } from "react-router-dom";
 import "./Login.css";
 import useAuth from "./../../Hooks/useAuth";
@@ -21,8 +20,8 @@ const Login = () => {
         history.push(redirect_uri);
         // setUser(result.user);
       })
-      .catch((error) => {
-        // setError(error.message);
+      .finally(() => {
+        // setIsLoading(false);
       });
   };
   return (
