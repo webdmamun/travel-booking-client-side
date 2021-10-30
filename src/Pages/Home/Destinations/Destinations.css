@@ -46,26 +46,6 @@ figure.single:hover figcaption {
   transition: all 0.35s ease-in-out;
 }
 
-.lightbox {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  top: 0;
-  left: 0;
-  background: rgba(9, 27, 39, 0.5);
-}
-.lightbox img {
-  max-width: 90%;
-  max-height: 80%;
-  margin-top: 5%;
-}
-.lightbox:target {
-  outline: none;
-  display: block;
-}
 .destination-heading {
   margin-bottom: 0.5em;
   color: #4b4f52;
