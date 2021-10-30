@@ -5,7 +5,7 @@ import Hotel from "./Hotel/Hotel";
 const Hotels = () => {
   const [hotels, setHotels] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/hotels")
+    fetch("https://calm-plateau-06503.herokuapp.com/hotels")
       .then((res) => res.json())
       .then((data) => setHotels(data));
   }, []);

@@ -9,14 +9,14 @@ const Services = () => {
   const [services, setServices] = useState([]);
   const [hotels, setHotels] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/services")
+    fetch("https://calm-plateau-06503.herokuapp.com/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
 
   // Load Hotels
   useEffect(() => {
-    fetch("http://localhost:5000/hotels")
+    fetch("https://calm-plateau-06503.herokuapp.com/hotels")
       .then((res) => res.json())
       .then((data) => setHotels(data));
   }, []);

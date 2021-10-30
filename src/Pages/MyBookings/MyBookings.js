@@ -8,14 +8,14 @@ const MyBookings = () => {
 
   // load booked services
   useEffect(() => {
-    fetch("http://localhost:5000/bookedservice")
+    fetch("https://calm-plateau-06503.herokuapp.com/bookedservice")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
 
   // load booked hotels
   useEffect(() => {
-    fetch("http://localhost:5000/bookedhotel")
+    fetch("https://calm-plateau-06503.herokuapp.com/bookedhotel")
       .then((res) => res.json())
       .then((data) => setHotels(data));
   }, []);
@@ -24,7 +24,7 @@ const MyBookings = () => {
   const handleDeleteService = (id) => {
     const proceed = window.confirm("Are you sure, You want to delete?");
     if (proceed) {
-      const url = `http://localhost:5000/bookedservice/${id}`;
+      const url = `https://calm-plateau-06503.herokuapp.com/bookedservice/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -43,7 +43,7 @@ const MyBookings = () => {
 
   // Delete a hotel
   const handleDeleteHotel = (id) => {
-    const url = `http://localhost:5000/bookedhotel/${id}`;
+    const url = `https://calm-plateau-06503.herokuapp.com/bookedhotel/${id}`;
     fetch(url, {
       method: "DELETE",
     }).then();

@@ -7,7 +7,7 @@ import useAuth from "./../../Hooks/useAuth";
 const Header = () => {
   const { user, logOut } = useAuth();
   return (
-    <>
+    <div className="sticky-top">
       <div className="header-top">
         <Container className="pt-2">
           <Row className="justify-content-between">
@@ -51,7 +51,7 @@ const Header = () => {
           </Row>
         </Container>
       </div>
-      <div className="header-container sticky-top">
+      <div className="header-container">
         <Navbar
           bg="light"
           variant="light"
@@ -126,7 +126,7 @@ const Header = () => {
           </Container>
         </Navbar>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -18,7 +18,7 @@ const ServiceDetail = () => {
   const onSubmit = (data) => {
     const bookedServiceID = { serviceID };
     data.bookedService = bookedServiceID;
-    fetch("http://localhost:5000/bookedservice", {
+    fetch("https://calm-plateau-06503.herokuapp.com/bookedservice", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -40,7 +40,7 @@ const ServiceDetail = () => {
 
   // load single Service
   useEffect(() => {
-    fetch(`http://localhost:5000/services/${serviceID}`)
+    fetch(`https://calm-plateau-06503.herokuapp.com/services/${serviceID}`)
       .then((res) => res.json())
       .then((data) => setService(data));
   }, [serviceID]);
