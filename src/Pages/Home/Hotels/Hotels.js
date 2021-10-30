@@ -10,23 +10,20 @@ const Hotels = () => {
       .then((data) => setHotels(data));
   }, []);
   return (
-    <div className="full-services-area">
+    <div className="full-hotel-area">
       <Container>
         <Row className="py-5">
           <Col>
-            <h2 className="services-heading">
-              Enjoy Specialized Care Through <br />
-              Precision, Artistry, and Experience
-            </h2>
+            <h2 className="services-heading">Recommended Hotels</h2>
           </Col>
           <Col className="search-box">
             <InputGroup className="mb-3">
               <FormControl
-                placeholder="Enter your Email..."
-                aria-label="What do you want to learn?"
+                placeholder="Search where you want to live?"
+                aria-label="Search where you want to live?"
                 aria-describedby="basic-addon2"
               />
-              <button className="btn btn-secondary">Subscribe</button>
+              <button className="btn btn-secondary">Search</button>
             </InputGroup>
           </Col>
         </Row>

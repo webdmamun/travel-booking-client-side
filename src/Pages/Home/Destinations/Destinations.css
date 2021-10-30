@@ -1,0 +1,75 @@
+figure.single {
+  position: relative;
+  margin: 15px;
+  width: 100%;
+  text-align: center;
+  background: #000000;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+figure.single figcaption {
+  font-family: "Slabo 27px", serif;
+  position: absolute;
+  padding: 15px;
+  top: 40%;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+figure.single:before {
+  background: rgba(9, 27, 39, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  content: "";
+  display: block;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+figure.single:hover:before {
+  background: rgba(9, 27, 39, 0.1);
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+figure.single:hover figcaption {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-clip-path: polygon(100% 0, 100% 90%, 0 100%, 0 10%);
+  clip-path: polygon(100% 0, 100% 90%, 0 100%, 0 10%);
+  position: absolute;
+  top: 65%;
+  left: 0;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background: rgba(9, 27, 39, 0.5);
+}
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  margin-top: 5%;
+}
+.lightbox:target {
+  outline: none;
+  display: block;
+}
+.destination-heading {
+  margin-bottom: 0.5em;
+  color: #4b4f52;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}

@@ -1,0 +1,75 @@
+.full-works-container {
+  background-color: #f8f9fa;
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+#image-gallary {
+  margin-top: 50px;
+}
+#image-gallary img {
+  width: 100%; /* need to overwrite inline dimensions */
+  height: auto;
+}
+#image-gallary h2 {
+  margin-bottom: 0.5em;
+  color: #4b4f52;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+#image-gallary .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1em;
+}
+
+/* hover styles */
+.single-image {
+  position: relative;
+}
+
+.root-image {
+  line-height: 0;
+  overflow: hidden;
+}
+
+.root-image img {
+  filter: blur(0px);
+  transition: filter 0.3s ease-in;
+  transform: scale(1.1);
+}
+
+.image-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+  background: rgba(156, 146, 147, 0.4);
+  color: white;
+
+  /* position the text in t’ middle*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.single-image:hover .image-title {
+  opacity: 1;
+  color: #fff;
+}
+.single-image:hover .image-title span {
+  opacity: 1;
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  padding: 10px;
+}
+
+.single-image:hover .root-image img {
+  filter: blur(2px);
+}
