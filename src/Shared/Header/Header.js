@@ -100,6 +100,19 @@ const Header = () => {
                 Contact Us
               </Nav.Link>
               {user.email && (
+                <Nav.Link
+                  as={NavLink}
+                  to="/mybookings"
+                  className="nav-item"
+                  activeStyle={{
+                    fontWeight: "bold",
+                    color: "#419DE2",
+                  }}
+                >
+                  My Booking
+                </Nav.Link>
+              )}
+              {user.email && (
                 <Navbar.Text>
                   Signed in as: <a href="/home">{user?.displayName}</a>
                   <img

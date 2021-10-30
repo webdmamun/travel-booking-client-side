@@ -19,10 +19,8 @@ const Hotel = (props) => {
           <div className="clearfix"></div>
         </div>
         <div className="card-read-more">
-          <Link to={`/department/${_id}`}>
-            <button className="mb-3 ms-3 btn btn-primary">
-              Details & Book
-            </button>{" "}
+          <Link to={`/hotels/${_id}`}>
+            <button className="mb-3 ms-3 btn btn-primary">Book Now</button>{" "}
           </Link>
         </div>
       </div>

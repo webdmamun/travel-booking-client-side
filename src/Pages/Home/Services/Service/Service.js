@@ -16,7 +16,7 @@ const Service = (props) => {
           <div className="clearfix"></div>
         </div>
         <div className="card-read-more">
-          <Link to={`/department/${_id}`}>
+          <Link to={`/services/${_id}`}>
             <button className="mb-3 ms-3 btn btn-primary">
               Details & Book
             </button>{" "}
