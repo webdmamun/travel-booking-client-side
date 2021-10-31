@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container, FormControl, InputGroup, Row } from "react-bootstrap";
+import {
+  Col,
+  Container,
+  FormControl,
+  InputGroup,
+  Row,
+  Spinner,
+} from "react-bootstrap";
 import "./Services.css";
 import Service from "./Service/Service";
 import Hotel from "./Hotel/Hotel";
@@ -42,11 +49,15 @@ const Services = () => {
               </InputGroup>
             </Col>
           </Row>
-          <div className="row gy-3">
-            {services.map((service) => (
-              <Service service={service} key={service._id}></Service>
-            ))}
-          </div>
+          {services.length === 0 ? (
+            <Spinner className="loading-spinner" animation="grow" />
+          ) : (
+            <div className="row gy-3">
+              {services.map((service) => (
+                <Service service={service} key={service._id}></Service>
+              ))}
+            </div>
+          )}
         </Container>
         <Container>
           <Row className="py-5">
@@ -67,11 +78,15 @@ const Services = () => {
               </InputGroup>
             </Col>
           </Row>
-          <div className="row gy-3">
-            {hotels.map((hotel) => (
-              <Hotel hotel={hotel} key={hotel._id}></Hotel>
-            ))}
-          </div>
+          {hotels.length === 0 ? (
+            <Spinner className="loading-spinner" animation="grow" />
+          ) : (
+            <div className="row gy-3">
+              {hotels.map((hotel) => (
+                <Hotel hotel={hotel} key={hotel._id}></Hotel>
+              ))}
+            </div>
+          )}
         </Container>
       </div>
     </div>

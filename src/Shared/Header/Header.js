@@ -113,6 +113,19 @@ const Header = () => {
                 </Nav.Link>
               )}
               {user.email && (
+                <Nav.Link
+                  as={NavLink}
+                  to="/manageusers"
+                  className="nav-item"
+                  activeStyle={{
+                    fontWeight: "bold",
+                    color: "#419DE2",
+                  }}
+                >
+                  Manage Users
+                </Nav.Link>
+              )}
+              {user.email && (
                 <Navbar.Text>
                   <a href="/home">{user?.displayName}</a>
                   <img

@@ -12,3 +12,8 @@
 .error {
   color: red;
 }
+.detail-cover-image {
+  width: 50%;
+  margin-left: 25%;
+  justify-content: center;
+}

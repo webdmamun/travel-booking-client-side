@@ -49,13 +49,24 @@ const ServiceDetail = () => {
     <div>
       <Container>
         <Row>
-          <h2>Title: {service.title}</h2>
-          <p>Location: {service.location}</p>
-          <p>Rating: {service.rating}</p>
-          <p>Price: {service.price}</p>
-          <p>Description: {service.overview}</p>
+          <h2 className="py-5 text-center text-info">
+            Details information of the Package
+          </h2>
+          <img className="detail-cover-image" src={service.img} alt="" />
+          <h2 className="pt-3 text-center text-secondary">{service.title}</h2>
+          <p className="text-center text-secondary">
+            Location: {service.location}
+          </p>
+          <p className="text-center text-secondary">
+            Rating: {service.rating} Star
+          </p>
+          <p className="text-center text-secondary">Price: {service.price}</p>
+          <p className="text-center text-secondary">{service.overview}</p>
         </Row>
         <Row>
+          <h2 className="pt-5 text-center text-info">
+            Please fill-up the form to confirm the package booking
+          </h2>
           <form className="shipping-form" onSubmit={handleSubmit(onSubmit)}>
             <input defaultValue={user.displayName} {...register("name")} />
 

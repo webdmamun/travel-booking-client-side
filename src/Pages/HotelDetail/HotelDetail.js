@@ -47,14 +47,27 @@ const HotelDetail = () => {
     <div>
       <Container>
         <Row>
-          <h2>Title: {hotel.hotel_name}</h2>
-          <p>Location: {hotel.location}</p>
-          <p>Rating: {hotel.rating}</p>
-          <p>Cost Per night{hotel.pernight}</p>
-          <p>Phone: {hotel.phone}</p>
-          <p>Email: {hotel.email}</p>
+          <h2 className="py-5 text-center text-info">
+            Details information of the Hotel
+          </h2>
+          <img className="detail-cover-image" src={hotel.img} alt="" />
+          <h2 className="pt-3 text-center text-secondary">
+            {hotel.hotel_name}
+          </h2>
+          <p className="text-center text-secondary">
+            Location: {hotel.location}
+          </p>
+          <p className="text-center text-secondary">Rating: {hotel.rating}</p>
+          <p className="text-center text-secondary">
+            Cost Per Night: ${hotel.pernight}
+          </p>
+          <p className="text-center text-secondary">Phone: {hotel.phone}</p>
+          <p className="text-center text-secondary">Email: {hotel.email}</p>
         </Row>
         <Row>
+          <h2 className="pt-5 text-center text-info">
+            Please fill-up the form to confirm the package booking
+          </h2>
           <form className="shipping-form" onSubmit={handleSubmit(onSubmit)}>
             <input defaultValue={user.displayName} {...register("name")} />
 

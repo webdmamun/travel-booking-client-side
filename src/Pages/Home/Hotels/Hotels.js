@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container, FormControl, InputGroup, Row } from "react-bootstrap";
+import {
+  Col,
+  Container,
+  FormControl,
+  InputGroup,
+  Row,
+  Spinner,
+} from "react-bootstrap";
 import Hotel from "./Hotel/Hotel";
 
 const Hotels = () => {
@@ -27,11 +34,15 @@ const Hotels = () => {
             </InputGroup>
           </Col>
         </Row>
-        <div className="row gy-3">
-          {hotels.map((hotel) => (
-            <Hotel hotel={hotel} key={hotel._id}></Hotel>
-          ))}
-        </div>
+        {hotels.length === 0 ? (
+          <Spinner className="loading-spinner" animation="grow" />
+        ) : (
+          <div className="row gy-3">
+            {hotels.map((hotel) => (
+              <Hotel hotel={hotel} key={hotel._id}></Hotel>
+            ))}
+          </div>
+        )}
       </Container>
     </div>
   );
